@@ -14,10 +14,32 @@
     
 </form>
 <p id="result">This text will be replaced </p>
+<div class="container">
+    <img src="Dragonflies.jpg" class="bordered mx-auto d-block" width="100px" height="100px" alt="Dragonfiles" id="images" onclick="swapImage()">
+</div>
 <script> 
+
+    let useImage = 1
+function swapImage(){
+    switch(useImage){
+        case 1:
+            document.getElementById("images").src="Dragonflies.jpg";
+            useImage+=1;
+            break;
+            case 2:
+            document.getElementById("images").src="Angelinserts.jpg";
+            useImage+=1;
+            break;
+            case 3:
+            document.getElementById("images").src="aphid.jpg";
+            useImage=1;
+            break;
+        }
+    }
+    </script>
+    <script>
     var correct = 0;
     var wrong = 0;
-    
     function checkGuess(){
             console.log("Getting form values")
             Name = document.getElementById("form_name").value
